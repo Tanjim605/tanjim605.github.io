@@ -5,6 +5,7 @@
 
 p{
     width: 400px;
+    margin-left: 3%;
     color: rgb(151, 151, 151);
 }
 
@@ -29,4 +30,17 @@ a{
 body{
     background-color: rgb(32, 64, 101);
     font-size: 20px;
+}
+
+a img{
+    color: rgb(32, 64, 101);
+    width: 28px;
+    height: 28px;
+}
+
+.icon{
+    margin: 0px;
+    padding: 0px;
+
+    text-decoration: none;
 }
