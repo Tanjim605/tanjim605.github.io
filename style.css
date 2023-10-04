@@ -67,3 +67,11 @@ a img{
 
     text-decoration: none;
 }
+
+.hide{
+    opacity: 0%;
+}
+
+.hide:hover{
+    opacity: 100%;
+}
