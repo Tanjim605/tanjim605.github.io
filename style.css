@@ -1,10 +1,16 @@
 *{
     font-family: monospace,Arial, sans-serif;
+    /* font-size: 100%; */
     margin: 15px;
 }
 
+h1{
+    font-size: 200%;
+}
+
 p{
-    width: 400px;
+    /* width: 400px; */
+    width: 70%;
     margin-left: 3%;
     color: rgb(151, 151, 151);
 }
@@ -16,6 +22,23 @@ p{
 
 a{
     color: rgb(100, 144, 104);
+}
+
+details{
+    margin-left: 0px;
+    text-decoration: underline;
+    color: rgb(100, 144, 104);
+    cursor: pointer;
+}
+
+details > summary
+{
+    list-style: none;
+}
+
+details ul li,
+details li a{
+    color: rgb(132, 169, 255);
 }
 
 .center{
