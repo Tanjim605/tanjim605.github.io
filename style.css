@@ -1,0 +1,32 @@
+*{
+    font-family: monospace,Arial, sans-serif;
+    margin: 15px;
+}
+
+p{
+    width: 400px;
+    color: rgb(151, 151, 151);
+}
+
+.gray{
+    padding: 15px;
+    color: rgb(156, 163, 181);
+}
+
+a{
+    color: rgb(100, 144, 104);
+}
+
+.center{
+    align-items: center;
+    padding-left: 5%;
+}
+
+.toppy{
+    margin-top: 100px;
+}
+
+body{
+    background-color: rgb(32, 64, 101);
+    font-size: 20px;
+}
