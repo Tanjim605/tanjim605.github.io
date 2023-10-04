@@ -25,6 +25,7 @@ a{
 }
 
 details{
+    width: 600px;
     margin-left: 0px;
     text-decoration: underline;
     color: rgb(100, 144, 104);
@@ -38,6 +39,7 @@ details > summary
 
 details ul li,
 details li a{
+    width: 400px;
     color: rgb(132, 169, 255);
 }
 
@@ -69,6 +71,7 @@ a img{
 }
 
 .hide{
+    width: 600px;
     opacity: 0%;
 }
 
