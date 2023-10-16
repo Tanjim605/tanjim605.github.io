@@ -49,9 +49,14 @@ details li a{
     color: rgb(132, 169, 255);
 }
 
-.center{
+.align{
     align-items: center;
     padding-left: 5%;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
 }
 
 .toppy{
