@@ -2,6 +2,8 @@
     font-family: monospace,Arial, sans-serif;
     /* font-size: 100%; */
     margin: 15px;
+
+    /* border: 2px solid ; */
 }
 
 h1{
@@ -25,21 +27,25 @@ a{
 }
 
 details{
-    width: 600px;
+    /* width: 600px; */
     margin-left: 0px;
     text-decoration: underline;
     color: rgb(100, 144, 104);
-    cursor: pointer;
+    width: max-content;
 }
 
 details > summary
 {
+    cursor: pointer;
     list-style: none;
+    width: max-content;
+    margin: 0px;
+    margin-left: 15px;
 }
 
 details ul li,
 details li a{
-    width: 400px;
+    /* width: 400px; */
     color: rgb(132, 169, 255);
 }
 
