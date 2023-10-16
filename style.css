@@ -57,6 +57,7 @@ details li a{
 .center{
     display: flex;
     justify-content: center;
+    gap: 25px;
 }
 
 .toppy{
