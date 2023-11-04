@@ -13,24 +13,30 @@ h1{
 p{
     /* width: 400px; */
     width: 70%;
-    margin-left: 3%;
-    color: rgb(151, 151, 151);
+    margin-left: 30px;
+    color: #B3B3B3;
 }
 
 .gray{
     padding: 15px;
-    color: rgb(156, 163, 181);
+    color: #A8B0BD;
 }
 
 a{
-    color: rgb(100, 144, 104);
+    color: #6C996F;
+    text-decoration: none;
+}
+
+a:hover,
+details:hover {
+    color: #b9b91e;
 }
 
 details{
     /* width: 600px; */
     margin-left: 0px;
-    text-decoration: underline;
-    color: rgb(100, 144, 104);
+    /* text-decoration: underline; */
+    color: #6C996F;
     width: max-content;
 }
 
@@ -62,10 +68,12 @@ details li a{
 
 .toppy{
     margin-top: 100px;
+    color: #FFFFFF;
 }
 
 body{
-    background-color: rgb(32, 64, 101);
+    /* background-color: rgb(32, 64, 101); */
+    background-color: #21252A;
     font-size: 20px;
 }
 
