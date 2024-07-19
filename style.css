@@ -6,6 +6,11 @@
     /* border: 2px solid ; */
 }
 
+*::selection{
+    background: #f67a32;
+    color: #21252A;
+}
+
 h1{
     font-size: 200%;
 }
