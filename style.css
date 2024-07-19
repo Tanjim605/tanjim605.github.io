@@ -10,6 +10,12 @@ h1{
     font-size: 200%;
 }
 
+h1:hover{
+    color: #567df2;
+    /* cursor: none; */
+    cursor: light;
+}
+
 p{
     /* width: 400px; */
     width: 70%;
@@ -71,6 +77,11 @@ details li a{
     color: #FFFFFF;
 }
 
+.pp{
+    width: 70px;
+    border-radius: 30%;
+}
+
 body{
     /* background-color: rgb(32, 64, 101); */
     background-color: #21252A;
@@ -81,6 +92,7 @@ a img{
     color: rgb(32, 64, 101);
     width: 28px;
     height: 28px;
+    margin: 0;
 }
 
 .icon{
@@ -88,6 +100,13 @@ a img{
     padding: 0px;
 
     text-decoration: none;
+    opacity: 75%;
+
+    margin: 15px;    
+}
+
+.icon:hover{
+    opacity: 100%;
 }
 
 .hide{
