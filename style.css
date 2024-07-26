@@ -4,6 +4,9 @@
     margin: 15px;
 
     /* border: 2px solid ; */
+    scrollbar-width: none;
+    list-style: "-";
+    cursor: url('assets/icons/cursor-target-32.png') 16 16, auto;
 }
 
 *::selection{
@@ -13,6 +16,7 @@
 
 h1{
     font-size: 200%;
+    width: fit-content;
 }
 
 h1:hover{
@@ -40,7 +44,8 @@ a{
 
 a:hover,
 details:hover {
-    color: #b9b91e;
+    color: #83ba87;
+    scale: 103%;
 }
 
 details{
@@ -53,7 +58,7 @@ details{
 
 details > summary
 {
-    cursor: pointer;
+    /* cursor: pointer; */
     list-style: none;
     width: max-content;
     margin: 0px;
@@ -112,6 +117,7 @@ a img{
 
 .icon:hover{
     opacity: 100%;
+    scale: 120%;
 }
 
 .hide{
