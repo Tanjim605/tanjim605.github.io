@@ -16,7 +16,11 @@ export default function App() {
   return (
     <>
       <ThemeContext.Provider value={{ darkMode, setDarkMode }}>
-        <div className="font-sans bg-white dark:bg-slate-900 transition-colors duration-300">
+        <div
+          className={`${
+            darkMode ? "dark" : ""
+          } font-sans bg-white dark:bg-slate-900 transition-colors duration-300`}
+        >
           <Navbar />
           <HeroSection />
           <About />

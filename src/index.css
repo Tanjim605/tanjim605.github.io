@@ -3,6 +3,9 @@
 .dark {
   /* @apply bg-[#17231f] text-amber-100; */
 }
+
+@custom-variant dark (&:where(.dark, .dark *));
+
 * {
   scroll-behavior: smooth;
 }

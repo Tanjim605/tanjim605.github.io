@@ -1,4 +1,7 @@
-import { useState } from "react";
+import {Moon, Sun} from "lucide-react"
+
+import { useContext, useState } from "react";
+import { ThemeContext } from "../context/index";
 
 import MenuButtonSvg from "../SVG/MenuButtonSvg";
 import XButtonSvg from "../SVG/XButtonSvg";
@@ -6,6 +9,7 @@ import NavLink from "./NavLink";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { darkMode, setDarkMode } = useContext(ThemeContext);
 
   const navItems = [
     { name: "Home", href: "#" },
@@ -36,17 +40,17 @@ export default function Navbar() {
           </nav>
 
           {/* dark mode toggle button */}
-          {/* <button
+          <button
             onClick={() => setDarkMode((darkMode) => !darkMode)}
-            className="ml-4 w-12 p-2 rounded-full text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-lime-500 dark:focus:ring-lime-400 transition-colors"
+            className="flex justify-center ml-4 w-12 p-2 rounded-full text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors"
             aria-label="Toggle theme"
           >
             {darkMode ? (
-              <MoonIconSvg className="h-5 w-5" />
+              <Moon className="h-6 w-6" />
             ) : (
-              <SunIconSvg className="h-5 w-5" />
+              <Sun fill="Yellow" className="h-6 w-6" />
             )}
-          </button> */}
+          </button>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center">
