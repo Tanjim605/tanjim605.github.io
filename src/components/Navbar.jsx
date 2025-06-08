@@ -1,4 +1,4 @@
-import {Moon, Sun} from "lucide-react"
+import { Moon, Sun } from "lucide-react";
 
 import { useContext, useState } from "react";
 import { ThemeContext } from "../context/index";
@@ -39,48 +39,53 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* dark mode toggle button */}
-          <button
-            onClick={() => setDarkMode((darkMode) => !darkMode)}
-            className="flex justify-center ml-4 w-12 p-2 rounded-full text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors"
-            aria-label="Toggle theme"
-          >
-            {darkMode ? (
-              <Moon className="h-6 w-6" />
-            ) : (
-              <Sun fill="Yellow" className="h-6 w-6" />
-            )}
-          </button>
-
-          {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center">
+          <div className="flex">
+            {/* dark mode toggle button */}
             <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md text-slate-500 hover:text-lime-600 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-lime-500"
-              aria-controls="mobile-menu"
-              aria-expanded={isMobileMenuOpen}
+              onClick={() => setDarkMode((darkMode) => !darkMode)}
+              className="flex justify-center ml-4 w-12 p-2 rounded-full text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors"
+              aria-label="Toggle theme"
             >
-              <span className="sr-only">Open main menu</span>
-              {isMobileMenuOpen ? (
-                <XButtonSvg className="block h-6 w-6" aria-hidden="true" />
+              {darkMode ? (
+                <Moon className="h-6 w-6" />
               ) : (
-                <MenuButtonSvg className="block h-6 w-6" aria-hidden="true" />
+                <Sun fill="Yellow" className="h-6 w-6" />
               )}
             </button>
+
+            {/* Mobile Menu Button */}
+            <div className="md:hidden flex items-center">
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                type="button"
+                className="inline-flex items-center justify-center p-2 rounded-md text-slate-500 hover:text-lime-600 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-lime-500"
+                aria-controls="mobile-menu"
+                aria-expanded={isMobileMenuOpen}
+              >
+                <span className="sr-only">Open main menu</span>
+                {isMobileMenuOpen ? (
+                  <XButtonSvg className="block h-6 w-6" aria-hidden="true" />
+                ) : (
+                  <MenuButtonSvg className="block h-6 w-6" aria-hidden="true" />
+                )}
+              </button>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-white shadow-lg" id="mobile-menu">
+        <div
+          className="md:hidden bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 dark:hover:text-lime-600 shadow-lg"
+          id="mobile-menu"
+        >
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="text-slate-700 hover:text-lime-600 hover:bg-lime-50 block px-3 py-2 rounded-md text-base font-medium transition-colors"
+                className="hover:text-lime-600 hover:bg-lime-50 block px-3 py-2 rounded-md text-base font-medium transition-colors"
               >
                 {item.name}
               </a>

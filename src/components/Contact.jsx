@@ -9,6 +9,7 @@ export default function Contact() {
     email: "",
     message: "",
   });
+  const [submissionStatus, setSubmissionStatus] = useState(null); // null, 'submitting', 'success', 'error'
 
   const contactDetails = [
     {
@@ -39,8 +40,52 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission logic here
-    alert("Thank you for your message!");
+    // alert("Thank you for your message!");
     setFormData({ name: "", email: "", message: "" });
+
+    setSubmissionStatus("submitting");
+
+    // The data object to be sent.
+    const dataToSend = {
+      ...formData,
+    };
+
+    // --- THIS IS THE IMPORTANT PART ---
+    // Replace 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE' with the URL you copied in Step 3.
+    const scriptURL =
+      "https://script.google.com/macros/s/AKfycbxe6u-6jMPziSCWjf2ONsvdO4TImVBLX2LTVQWraGWvlci5-_Km6_m6aMDKLex8bD4/exec";
+
+    fetch(scriptURL, {
+      method: "POST",
+      mode: "no-cors", // Important to avoid CORS issues
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(dataToSend),
+    })
+      .then((res) => {
+        // Because of 'no-cors', we can't actually read the response.
+        // We'll just assume success if the request doesn't throw an error.
+        console.log("Form data sent successfully");
+        setSubmissionStatus("success");
+        setFormData({ name: "", email: "", message: "" }); // Clear the form
+        // Reset status after a few seconds
+        setTimeout(() => setSubmissionStatus(null), 3000);
+      })
+      .catch((error) => {
+        console.error("Error!", error.message);
+        setSubmissionStatus("error");
+        // Reset status after a few seconds
+        setTimeout(() => setSubmissionStatus(null), 3000);
+      });
+  };
+
+  // Helper to change button text based on status
+  const getButtonText = () => {
+    if (submissionStatus === "submitting") return "Sending...";
+    if (submissionStatus === "success") return "Sent!";
+    if (submissionStatus === "error") return "Error! Try Again";
+    return "Send Message";
   };
 
   return (
@@ -105,8 +150,10 @@ export default function Contact() {
                 <button
                   type="submit"
                   className="w-full px-6 py-3 rounded-lg bg-slate-800 dark:bg-slate-900 text-white font-semibold hover:bg-slate-700 dark:hover:bg-black focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 dark:focus:ring-offset-slate-800 transition-colors"
+                  disabled={submissionStatus === "submitting"}
                 >
-                  Send Message
+                  {getButtonText()}
+                  {/* Send Message */}
                 </button>
               </div>
             </form>
@@ -123,7 +170,10 @@ export default function Contact() {
                       {item.title}
                     </h4>
                     <p className="text-slate-600 dark:text-slate-400">
-                      <a href={item.href} target="_blank"> {item.detail} </a>
+                      <a href={item.href} target="_blank">
+                        {" "}
+                        {item.detail}{" "}
+                      </a>
                     </p>
                   </div>
                 </div>
