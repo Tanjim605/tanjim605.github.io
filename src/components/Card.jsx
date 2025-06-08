@@ -30,7 +30,7 @@ export default function Card({
 
   return (
     <div
-      className={`p-6 md:p-8 rounded-3xl shadow-[0px_5px_0px_0px_rgba(25,26,35,1.00)] flex flex-col justify-between min-h-[280px] md:min-h-[320px] ${bgColorClass} outline outline-offset-[-1px] outline-[#191a23] transition-all duration-300 hover:shadow-2xl hover:scale-105`}
+      className={`p-6 md:p-8 rounded-3xl shadow-[0px_5px_0px_0px_rgba(25,26,35,1.00)] dark:shadow-amber-50/20 flex flex-col justify-between min-h-[280px] md:min-h-[320px] ${bgColorClass} outline outline-offset-[-1px] outline-[#191a23] transition-all duration-300 hover:shadow-2xl hover:scale-105`}
     >
       <div>
         <h3
