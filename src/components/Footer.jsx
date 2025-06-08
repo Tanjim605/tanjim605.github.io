@@ -5,7 +5,7 @@ export default function Footer() {
   const socialLinks = [
     { name: "LinkedIn", href: "https://www.linkedin.com/in/kazi-tanjimul-islam-9a9464234/", icon: Linkedin },
     { name: "Facebook", href: "https://github.com/Tanjim605", icon: Github },
-    { name: "Twitter", href: "#", icon: Twitter },
+    // { name: "Twitter", href: "#", icon: Twitter },
   ];
   return (
     <footer id="contact" className="bg-slate-900 dark:bg-black text-slate-300 pt-16 pb-8 rounded-t-3xl md:rounded-t-[50px]">
@@ -14,13 +14,14 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center mb-12 gap-8">
           <div className="flex-shrink-0 flex items-center">
             <Sparkles className="h-8 w-auto text-lime-400 mr-2" />
-            <span className="font-bold text-2xl text-white">Positivus</span>
+            <span className="font-bold text-2xl text-white">Tanjim</span>
           </div>
           <div className="flex space-x-4">
             {socialLinks.map((social) => (
               <a
                 key={social.name}
                 href={social.href}
+                target="_blank"
                 className="text-slate-400 hover:text-lime-400 transition-colors"
                 aria-label={social.name}
               >

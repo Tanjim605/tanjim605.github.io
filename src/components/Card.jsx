@@ -1,4 +1,4 @@
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink } from "lucide-react";
 
 export default function Card({
   title,
@@ -45,6 +45,7 @@ export default function Card({
       <div className="flex gap-5 items-end">
         <a
           href={codeUrl}
+          target="_blank"
           className={`bg-orange-600 px-5 py-2 rounded-2xl inline-flex items-center font-medium ${learnMoreColorClass} text-white group`}
         >
           Code
@@ -53,9 +54,10 @@ export default function Card({
         {liveUrl && (
           <a
             href={liveUrl}
+            target="_blank"
             className={`bg-orange-600 px-5 py-2 rounded-2xl inline-flex items-center font-medium ${learnMoreColorClass} text-white group`}
           >
-            Live Link <ExternalLink size={17} className="ml-2"/>
+            Live Link <ExternalLink size={17} className="ml-2" />
           </a>
         )}
       </div>

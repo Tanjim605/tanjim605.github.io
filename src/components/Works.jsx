@@ -70,7 +70,7 @@ export default function Works() {
           sectionId={"works"}
           heading={"My works"}
           descriptionText={
-            "At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include:"
+            "Here are some on my works. Some of them are just static page."
           }
         />
 
