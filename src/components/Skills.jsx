@@ -58,7 +58,7 @@ export default function Skills() {
           heading={"Skill"}
           descriptionText={"Here are the tools and language I am familiar with"}
         />
-        <div className="flex flex-wrap mx-auto space-y-4">
+        <div className="flex justify-around flex-wrap mx-auto space-y-4">
           {skillSet.map((item, index) => (
             <DropDownCard
               key={index}
