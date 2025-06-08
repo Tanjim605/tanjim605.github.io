@@ -41,7 +41,7 @@ export default function Footer() {
               <li>
                 Email:{" "}
                 <a
-                  href="mailto:info@positivus.com"
+                  href="mailto:tanjimulislam2001@gmail.com"
                   className="hover:text-lime-400"
                 >
                   tanjimulislam2001@gmail.com
